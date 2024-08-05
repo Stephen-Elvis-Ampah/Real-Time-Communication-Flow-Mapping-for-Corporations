@@ -37,7 +37,6 @@ dt <- data.table(
 
 # Create the highchart object
 highchartzero() %>%
-  hc_chart(backgroundColor = "#343A40") %>%
   hc_add_series(
     data = dt,
     type = "networkgraph",
@@ -102,7 +101,7 @@ highchartzero() %>%
   hc_title(
     text = "Network Graph",
     style = list(
-      color = "#f8f9fa",
+      color = "white",
       fontSize = "20px",
       fontWeight = "bold"
     )
@@ -129,7 +128,7 @@ highchartzero() %>%
   
   hc_credits(
     enabled = FALSE
-  ) # Remove the credit text added by Highcharts to acknowledge the use of their software
+  ) 
 ```
 
 

@@ -51,6 +51,36 @@ internal communications. This tool not only maps out department
 interactions but also updates dynamically with new data, providing
 ongoing insights into communication patterns.
 
+CommuniGraph: Real-Time Communication Flow Mapping for Corporations
+================
+Stephen Elvis Ampah
+05.08.2024
+
+## Introduction
+
+In today’s corporate environment, where efficient communication is
+paramount, visualizing the network of interactions within an
+organization like TechCorp can be incredibly beneficial. This project, a
+dynamic visualization tool, offers a deep dive into the communication
+patterns between different departments, aiming to optimize interactions
+and enhance organizational efficiency.
+
+## Background
+
+At TechCorp, like many other companies, communication silos often impede
+seamless collaboration across departments. This visualization tool was
+developed to break down these barriers by clearly illustrating how
+different parts of the organization interact, which can help identify
+areas for improvement.
+
+## Tool Description
+
+The “Visual Network Graph” utilizes the power of R and the Highcharter
+library to render an interactive and dynamic network graph of TechCorp’s
+internal communications. This tool not only maps out department
+interactions but also updates dynamically with new data, providing
+ongoing insights into communication patterns.
+
 ``` r
 library(highcharter)
 ```
@@ -101,7 +131,6 @@ dt <- data.table(
 
 # Create the highchart object
 highchartzero() %>%
-  hc_chart(backgroundColor = "#343A40") %>%
   hc_add_series(
     data = dt,
     type = "networkgraph",
@@ -166,7 +195,7 @@ highchartzero() %>%
   hc_title(
     text = "Network Graph",
     style = list(
-      color = "#f8f9fa",
+      color = "white",
       fontSize = "20px",
       fontWeight = "bold"
     )
@@ -193,7 +222,7 @@ highchartzero() %>%
   
   hc_credits(
     enabled = FALSE
-  ) # Remove the credit text added by Highcharts to acknowledge the use of their software
+  ) 
 ```
 
     ## PhantomJS not found. You can install it with webshot::install_phantomjs(). If it is installed, please make sure the phantomjs executable can be found via the PATH variable.
