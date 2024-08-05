@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>body{background-color:white;}</style>
+<link href="lib/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="lib/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="lib/jquery-3.5.1/jquery.min.js"></script>
+<script src="lib/highcharts-9.3.1/highcharts.js"></script>
+<script src="lib/highcharts-9.3.1/custom/reset.js"></script>
+<script src="lib/highchartzero-binding-0.9.4/highchartzero.js"></script>
+<script src="lib/networkgraph.js-9.3.1/networkgraph.js"></script>
+
+</head>
+<body>
+<!-- htmlwidget-container-begin -->
+<div class="highchartzero html-widget html-fill-item" id="htmlwidget-a3955f6dbf5d154d27f1" style="width:100%;height:500px;"></div>
+<!-- htmlwidget-container-end -->
+<script type="application/json" data-for="htmlwidget-a3955f6dbf5d154d27f1">{"x":{"hc_opts":{"series":[{"data":[{"from":"TechCorp","to":"HR"},{"from":"TechCorp","to":"IT"},{"from":"HR","to":"DE HR"},{"from":"IT","to":"DE IT"},{"from":"HR","to":"GH HR"},{"from":"IT","to":"GH IT"},{"from":"HR","to":"US HR"},{"from":"IT","to":"US IT"}],"type":"networkgraph","layoutAlgorithm":{"enableSimulation":true,"integration":"verlet"},"marker":{"symbol":"circle","radius":35,"lineColor":"none","fillColor":{"linearGradient":{"x1":0,"y1":1,"x2":0,"y2":0},"stops":[["0","#4C9A9E"],["1","#7BFAFF"]]},"states":{"hover":{"fillColor":"#E91E63","lineColor":"none","radius":35}}},"link":{"color":{"linearGradient":{"x1":0,"y1":1,"x2":0,"y2":0},"stops":[["0","#4C9A9E"],["1","#7BFAFF"]]},"width":"3"},"dataLabels":{"enabled":true,"useHTML":true,"y":15,"linkFormat":"","formatter":"function() {\n      var flagURL = 'https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/';\n      var countryMap = { 'DE': 'de', 'GH': 'gh', 'US': 'us' };\n      var country = this.key.split(' ')[0];\n      var flagIcon = countryMap[country] ? '<img src=\"' + flagURL + countryMap[country] + '.svg\" style=\"width: 15px; height: 15px; margin-right: 5px; vertical-align: middle;\">' : '';\n      return flagIcon + '<span style=\"vertical-align: middle;\">' + this.key + '<\/span>';\n    }"}}],"title":{"text":"Network Graph","style":{"color":"white","fontSize":"20px","fontWeight":"bold"}},"tooltip":{"enabled":true,"useHTML":true,"formatter":"function() {\n            if (this.point.id === 'DE HR' || this.point.id === 'GH HR' || this.point.id === 'US HR' || this.point.id === 'DE IT' || this.point.id === 'GH IT' || this.point.id === 'US IT') {\n              return this.point.name + '<br>XY: ' + this.point.xy + '<br>MN: ' + this.point.mn;\n            } else {\n              return this.point.name;\n            }\n          }"},"credits":{"enabled":false}},"fonts":[]},"evals":["hc_opts.series.0.dataLabels.formatter","hc_opts.tooltip.formatter"],"jsHooks":[]}</script>
+<!-- htmlwidget-sizing-policy-base64 PHNjcmlwdCB0eXBlPSJhcHBsaWNhdGlvbi9odG1sd2lkZ2V0LXNpemluZyIgZGF0YS1mb3I9Imh0bWx3aWRnZXQtYTM5NTVmNmRiZjVkMTU0ZDI3ZjEiPnsidmlld2VyIjp7IndpZHRoIjoiYXV0byIsImhlaWdodCI6MzUwLCJwYWRkaW5nIjoxNSwiZmlsbCI6dHJ1ZX0sImJyb3dzZXIiOnsid2lkdGgiOiJhdXRvIiwiaGVpZ2h0Ijo1MDAsInBhZGRpbmciOjQwLCJmaWxsIjpmYWxzZX19PC9zY3JpcHQ+ -->
+</body>
+</html>

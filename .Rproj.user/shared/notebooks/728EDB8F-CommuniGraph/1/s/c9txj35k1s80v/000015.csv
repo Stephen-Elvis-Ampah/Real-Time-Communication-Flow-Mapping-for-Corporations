@@ -1,0 +1,5 @@
+"0","    # # Save the widget as an HTML file"
+"0","    # saveWidget(hc, ""plot.html"", selfcontained = FALSE)"
+"0","    # "
+"0","    # # Use webshot to convert it to an image"
+"0","    # webshot2::webshot(""plot.html"", ""plot.png"", delay = 5)"

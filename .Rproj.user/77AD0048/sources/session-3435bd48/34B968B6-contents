@@ -9,10 +9,6 @@ library(highcharter)
     ##   method            from
     ##   as.zoo.data.frame zoo
 
-    ## Highcharts (www.highcharts.com) is a Highsoft software product which is
-
-    ## not free for commercial and Governmental use
-
 ``` r
 library(dplyr)
 ```
@@ -51,107 +47,99 @@ library(htmlwidgets)
   
   dt <- data.table(
     from = c("TechCorp", "TechCorp", "HR", "IT", "HR", "IT", "HR", "IT"),
-    to = c("HR", "IT", "06 HR", "6 IT", "25 HR", "25 IT", "30 HR", "30 IT")
+    to = c("HR", "IT", "DE HR", "DE IT", "GH HR", "GH IT", "US HR", "US IT")
     )
   
   # Create the highchart object
   hc <- highchartzero() %>%
-    hc_add_series(
-      data = dt,
-      type = "networkgraph",
-      layoutAlgorithm = list(
-        enableSimulation = TRUE,
-        integration = "verlet"
-      ),
-      marker = list(
-        symbol = "circle",
-        radius = 35,
-        lineColor = "none",
-        # nodes = nodes,
-        fillColor = list(
-          linearGradient = list(x1 = 0, y1 = 1, x2 = 0, y2 = 0),
-          stops = list(
-            c(0, "#4C9A9E"),
-            c(1, "#7BFAFF"))),
-        states = list(
-          hover = list(
-            fillColor = "#E91E63",
-            lineColor = "none",
-            radius = 35
-          )
+  hc_add_series(
+    data = dt,
+    type = "networkgraph",
+    layoutAlgorithm = list(
+      enableSimulation = TRUE,
+      integration = "verlet"
+    ),
+    marker = list(
+      symbol = "circle",
+      radius = 35,
+      lineColor = "none",
+      # nodes = nodes,
+      fillColor = list(
+        linearGradient = list(x1 = 0, y1 = 1, x2 = 0, y2 = 0),
+        stops = list(
+          c(0, "#4C9A9E"),
+          c(1, "#7BFAFF"))),
+      states = list(
+        hover = list(
+          fillColor = "#E91E63",
+          lineColor = "none",
+          radius = 35
         )
-      ),
-      
-      link = list(
-        color = list(
-          linearGradient = list(x1 = 0, y1 = 1, x2 = 0, y2 = 0),
-          stops = list(
-            c(0, "#4C9A9E"),
-            c(1, "#7BFAFF"))),
-        width = '3'
-      ),
-      
-      dataLabels = list(
-        enabled = TRUE,
-        style = list(
-          color = "#f8f9fa",
-          fontSize = "14px",
-          fontWeight = "bold",
-          textOutline = FALSE
-        ),
-        
-        y = 20,
-        linkFormat = ""
-      ),
-      
-      nodes = list(
-        list(id = "06 HR", xy = XY[1], mn = MN[1]),
-        list(id = "6 IT", xy = XY[2], mn = MN[2]),
-        list(id = "25 HR", xy = XY[3], mn = MN[3]),
-        list(id = "25 IT", xy = XY[4], mn = MN[4]),
-        list(id = "30 HR", xy = XY[5], mn = MN[5]),
-        list(id = "30 IT", xy = XY[6], mn = MN[6]),
-        list(id = "TechCorp"),
-        list(id = "HR"),
-        list(id = "IT")
       )
-    ) %>%
+    ),
     
-    hc_title(
-      text = "Network Graph",
-      style = list(
-        color = "white",
-        fontSize = "20px",
-        fontWeight = "bold"
-      )
-    ) %>%
+    link = list(
+      color = list(
+        linearGradient = list(x1 = 0, y1 = 1, x2 = 0, y2 = 0),
+        stops = list(
+          c(0, "#4C9A9E"),
+          c(1, "#7BFAFF"))),
+      width = '3'
+    ),
     
-    # Tooltip enables the hovering effect to take place
-    hc_tooltip(
-      enabled = T,
-      useHTML = TRUE,
-      formatter = JS(
-        "function() {
-            if (this.point.id === '06 HR' || this.point.id === '25 HR' || this.point.id === '30 HR' || this.point.id === '6 IT' || this.point.id === '25 IT' || this.point.id === '30 IT') {
+    dataLabels = list(
+  enabled = TRUE,
+  useHTML = TRUE,
+  y = 15,
+  linkFormat = "",
+  formatter = JS(
+    "function() {
+      var flagURL = 'https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/';
+      var countryMap = { 'DE': 'de', 'GH': 'gh', 'US': 'us' };
+      var country = this.key.split(' ')[0];
+      var flagIcon = countryMap[country] ? '<img src=\"' + flagURL + countryMap[country] + '.svg\" style=\"width: 15px; height: 15px; margin-right: 5px; vertical-align: middle;\">' : '';
+      return flagIcon + '<span style=\"vertical-align: middle;\">' + this.key + '</span>';
+    }"
+  )
+),
+
+  ) %>%
+  
+  hc_title(
+    text = "Network Graph",
+    style = list(
+      color = "white",
+      fontSize = "20px",
+      fontWeight = "bold"
+    )
+  ) %>%
+  
+  # Tooltip enables the hovering effect to take place
+  hc_tooltip(
+    enabled = T,
+    useHTML = TRUE,
+    formatter = JS(
+      "function() {
+            if (this.point.id === 'DE HR' || this.point.id === 'GH HR' || this.point.id === 'US HR' || this.point.id === 'DE IT' || this.point.id === 'GH IT' || this.point.id === 'US IT') {
               return this.point.name + '<br>XY: ' + this.point.xy + '<br>MN: ' + this.point.mn;
             } else {
               return this.point.name;
             }
           }"
-      )
-    )%>%
-    
-    hc_add_dependency(
-      "modules/networkgraph.js"
-    ) %>%
-    
-    hc_credits(
-      enabled = FALSE
-    ) 
-
+    )
+  )%>%
+  
+  hc_add_dependency(
+    "modules/networkgraph.js"
+  ) %>%
+  
+  hc_credits(
+    enabled = FALSE
+  ) 
+  
     # Save the widget as an HTML file
     saveWidget(hc, "plot.html", selfcontained = FALSE)
-    
+
     # Use webshot to convert it to an image
     webshot2::webshot("plot.html", "plot.png", delay = 5)
 ```

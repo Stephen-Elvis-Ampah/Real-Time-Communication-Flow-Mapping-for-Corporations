@@ -3,7 +3,7 @@
     "path": "~/Documents/SP/NetWork_Chart/CommuniGraph.Rmd",
     "project_path": "CommuniGraph.Rmd",
     "type": "r_markdown",
-    "hash": "1744603094",
+    "hash": "2047602561",
     "contents": "",
     "dirty": false,
     "created": 1722871936455.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "12,17",
-        "scrollLine": "0"
+        "cursorPosition": "110,19",
+        "scrollLine": "91"
     },
     "folds": "",
-    "lastKnownWriteTime": 1722880075,
+    "lastKnownWriteTime": 1722882199,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1722880076017,
+    "last_content_update": 1722882199438,
     "read_only": false,
     "read_only_alternatives": []
 }
