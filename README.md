@@ -95,7 +95,7 @@ library(htmlwidgets)
     ),
     marker = list(
       symbol = "circle",
-      radius = 35,
+      radius = 50,
       lineColor = "none",
       # nodes = nodes,
       fillColor = list(
@@ -118,7 +118,7 @@ library(htmlwidgets)
         stops = list(
           c(0, "#4C9A9E"),
           c(1, "#7BFAFF"))),
-      width = '3'
+      width = '5'
     ),
     
     dataLabels = list(
@@ -126,6 +126,11 @@ library(htmlwidgets)
   useHTML = TRUE,
   y = 15,
   linkFormat = "",
+  style = list(
+          fontSize = "17px",
+          fontWeight = "bold",
+          textOutline = FALSE
+        ),
   formatter = JS(
     "function() {
       var flagURL = 'https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/';

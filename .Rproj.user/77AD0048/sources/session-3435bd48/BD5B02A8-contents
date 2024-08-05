@@ -148,6 +148,11 @@ hc <- highchartzero() %>%
       useHTML = TRUE,
       y = 15,
       linkFormat = "",
+      style = list(
+        fontSize = "16px",
+        fontWeight = "bold",
+        textOutline = FALSE
+      ),
       formatter = JS(
         "function() {
       var flagURL = 'https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/';
