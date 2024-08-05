@@ -1,14 +1,14 @@
 {
-    "id": "2472FB63",
-    "path": "~/Documents/SP/NetWork_Chart/CommuniGraph.Rmd",
-    "project_path": "CommuniGraph.Rmd",
+    "id": "0AC6B4FB",
+    "path": "~/Documents/SP/Student_Project/exams.Rmd",
+    "project_path": null,
     "type": "r_markdown",
-    "hash": "287980693",
+    "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1722871936455.0,
+    "created": 1722872941442.0,
     "source_on_save": false,
-    "relative_order": 2,
+    "relative_order": 3,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
@@ -16,11 +16,11 @@
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1722873221,
+    "lastKnownWriteTime": 1722354567,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1722873221713,
+    "last_content_update": 1722354567,
     "read_only": false,
     "read_only_alternatives": []
 }
