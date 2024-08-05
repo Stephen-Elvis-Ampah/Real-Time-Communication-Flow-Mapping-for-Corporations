@@ -42,10 +42,7 @@ library(htmlwidgets)
 
 ``` r
   # Preparing the data
-  XY <- c(0, 2, -3, 4, -2, 6)
-  MN <- c(0, 3, 6, 8, 6, 7)
-  
-  dt <- data.table(
+   dt <- data.table(
     from = c("TechCorp", "TechCorp", "HR", "IT", "HR", "IT", "HR", "IT"),
     to = c("HR", "IT", "DE HR", "DE IT", "GH HR", "GH IT", "US HR", "US IT")
     )
