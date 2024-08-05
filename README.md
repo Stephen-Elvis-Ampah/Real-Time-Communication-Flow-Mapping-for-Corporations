@@ -20,37 +20,6 @@ Plans are underway to enhance the tool with predictive capabilities, using machi
 
 This project demonstrates the powerful role that data visualization can play in enhancing organizational communication. It provides not just a snapshot but a dynamic view of the communication landscape, supporting continuous improvement and strategic decision-making.
 
-
-CommuniGraph: Real-Time Communication Flow Mapping for Corporations
-================
-Stephen Elvis Ampah
-05.08.2024
-
-## Introduction
-
-In today’s corporate environment, where efficient communication is
-paramount, visualizing the network of interactions within an
-organization like TechCorp can be incredibly beneficial. This project, a
-dynamic visualization tool, offers a deep dive into the communication
-patterns between different departments, aiming to optimize interactions
-and enhance organizational efficiency.
-
-## Background
-
-At TechCorp, like many other companies, communication silos often impede
-seamless collaboration across departments. This visualization tool was
-developed to break down these barriers by clearly illustrating how
-different parts of the organization interact, which can help identify
-areas for improvement.
-
-## Tool Description
-
-The “Visual Network Graph” utilizes the power of R and the Highcharter
-library to render an interactive and dynamic network graph of TechCorp’s
-internal communications. This tool not only maps out department
-interactions but also updates dynamically with new data, providing
-ongoing insights into communication patterns.
-
 CommuniGraph: Real-Time Communication Flow Mapping for Corporations
 ================
 Stephen Elvis Ampah
