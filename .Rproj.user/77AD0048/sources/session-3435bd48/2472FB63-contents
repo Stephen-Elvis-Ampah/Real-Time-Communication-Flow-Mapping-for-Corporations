@@ -2,8 +2,7 @@
 title: "CommuniGraph: Real-Time Communication Flow Mapping for Corporations"
 author: "Stephen Elvis Ampah"
 date: "`r format(Sys.Date(), '%d.%m.%Y')`"
-output:
-  html_document: default
+output: github_document
 ---
 
 
